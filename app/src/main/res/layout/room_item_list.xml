@@ -9,6 +9,7 @@
     >
 
     <ImageView
+        android:id="@+id/roomImg"
         android:background="#FFFFFF"
         android:layout_width="140dp"
         android:layout_height="100dp"
@@ -31,7 +32,9 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             >
+
             <TextView
+                android:id="@+id/momthlyRantTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="월세/보증금"
@@ -40,6 +43,7 @@
                 />
 
             <TextView
+                android:id="@+id/floorTxt"
                 android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,6 +51,7 @@
                 />
 
             <ImageView
+
                 android:layout_marginLeft="20dp"
                 android:layout_width="30dp"
                 android:layout_height="20dp"
@@ -56,6 +61,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/roomAddrTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="주소"
@@ -63,6 +69,7 @@
             />
 
         <TextView
+            android:id="@+id/roomTypeTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="방 타입"
@@ -70,6 +77,7 @@
             />
 
         <TextView
+            android:id="@+id/roomInfoTxt"
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
