@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.jickbanglistviewpractice.R;
 import com.example.jickbanglistviewpractice.datas.Room;
@@ -38,6 +40,17 @@ public class RoomAdapter extends ArrayAdapter<Room> {
 
         Room roomData = roomList.get(position);
 
+        TextView monthlyRantTxt = row.findViewById(R.id.monthlyRantTxt);
+        TextView floorTxt = row.findViewById(R.id.floorTxt);
+        TextView roomAddrTxt = row.findViewById(R.id.roomAddrTxt);
+        TextView roomTypeTxt = row.findViewById(R.id.roomTypeTxt);
+        TextView roomInfoTxt = row.findViewById(R.id.roomInfoTxt);
+        
+        monthlyRantTxt.setText(String.format("%d/%d", roomData.getMonthlyRent(), roomData.getDeposit()));
+        floorTxt.setText(String.format("%s층", roomData.getFloor()));
+        roomAddrTxt.setText(roomData.getAddr());
+        roomTypeTxt.setText(roomData.getRoomType());
+        roomInfoTxt.setText(roomData.getRoomInfo());
 
         return row;
     }
