@@ -1,8 +1,11 @@
 package com.example.jickbanglistviewpractice;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 
 import com.example.jickbanglistviewpractice.Adapters.RoomAdapter;
 import com.example.jickbanglistviewpractice.databinding.ActivityMainBinding;
@@ -26,6 +29,19 @@ public class MainActivity extends AppCompatActivity {
 
         RoomAdapter roomAdapter = new RoomAdapter(MainActivity.this, roomList);
         act.roomList.setAdapter(roomAdapter);
+
+        act.roomList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+
+                intent.putExtra("ROOM_DATA", roomList.get(position));
+
+                startActivity(intent);
+
+            }
+        });
 
 
     }
