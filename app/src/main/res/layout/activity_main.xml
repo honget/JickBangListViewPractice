@@ -11,6 +11,13 @@
         android:orientation="vertical"
         >
 
+        <Button
+            android:id="@+id/addRoomBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="방 추가"
+            />
+
         <ListView
             android:id="@+id/roomList"
             android:layout_width="match_parent"
